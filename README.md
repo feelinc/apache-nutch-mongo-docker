@@ -11,6 +11,8 @@ docker-compose stop
 
 Change the http.agent.name inside nutch-site.template
 
+At "ant runtime" command in Dockerfile will took a very long time to complete depends on your computer/server and internet connection speed, so be patient.
+
 ## Create MongoDB User
 Run below command :
 docker exec -it <docker_container_id> mongo admin

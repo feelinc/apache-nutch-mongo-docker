@@ -10,7 +10,7 @@ services:
             - ./mongo-data:/data
         ports:
             - "27017:27017"
-        command: --smallfiles --rest --storageEngine wiredTiger
+        command: --smallfiles --rest --auth --storageEngine wiredTiger
 
 ### Apache Nutch Container ###########################################
 
