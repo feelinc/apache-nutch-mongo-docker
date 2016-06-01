@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+
+### Mongo Container ###########################################
+
+    mongo:
+        image: mongo:3.3.6
+        volumes:
+            - ./mongo-data:/data
+        ports:
+            - "27017:27017"
+        command: --smallfiles --rest --storageEngine wiredTiger
+
+### Apache Nutch Container ###########################################
+
+    nutch:
+        build: ./nutch
+        ports:
+            - "8081:8081"
+            - "8080:8080"
+        links:
+            - mongo
+            
+### Add more Containers below ###############################
